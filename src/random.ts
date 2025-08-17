@@ -38,3 +38,10 @@ export const uid = (length: number, specials: string = '') => {
     ''
   )
 }
+
+export const jitter = (delay: number, factor = 0.2): number => {
+  if (!Number.isFinite(delay) || delay < 0) return 0
+  if (!Number.isFinite(factor) || factor < 0) factor = 0
+  const jitter = delay * factor * random(-1, 1)
+  return Math.max(0, delay + jitter)
+}

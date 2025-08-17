@@ -73,7 +73,7 @@ export {
   shake,
   upperize
 } from './object'
-export { draw, random, shuffle, uid } from './random'
+export { draw, jitter, random, shuffle, uid } from './random'
 export { series } from './series'
 export {
   camel,
